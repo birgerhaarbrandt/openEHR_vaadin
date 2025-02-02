@@ -1,0 +1,22 @@
+{
+    "containerDefinitions": [
+      {
+        "name": "IPS_Demo",
+        "image": "REPOSITORY_URI:IMAGE_TAG",
+        "portMappings": [
+          {
+            "containerPort": 8080,
+            "protocol": "tcp"
+          }
+        ],
+        "essential": true
+      }
+    ],
+    "taskRoleArn": "TASK_ROLE_ARN",
+    "executionRoleArn": "EXECUTION_ROLE_ARN",
+    "family": "codedeploy-sample",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "512",
+    "memory": "1024"
+  }

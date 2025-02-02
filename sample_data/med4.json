@@ -1,0 +1,259 @@
+﻿{
+    "_type" : "COMPOSITION",
+    "name" : {
+      "_type" : "DV_TEXT",
+      "value" : "ips_medication_order_list.1.0.0"
+    },
+    "archetype_details" : {
+      "archetype_id" : {
+        "value" : "openEHR-EHR-COMPOSITION.medication_list.v1"
+      },
+      "template_id" : {
+        "value" : "ips_medicationlist.1.0.0"
+      },
+      "rm_version" : "1.0.4"
+    },
+    "language" : {
+      "_type" : "CODE_PHRASE",
+      "terminology_id" : {
+        "_type" : "TERMINOLOGY_ID",
+        "value" : "ISO_639-1"
+      },
+      "code_string" : "en"
+    },
+    "territory" : {
+      "_type" : "CODE_PHRASE",
+      "terminology_id" : {
+        "_type" : "TERMINOLOGY_ID",
+        "value" : "ISO_3166-1"
+      },
+      "code_string" : "SE"
+    },
+    "category" : {
+      "_type" : "DV_CODED_TEXT",
+      "value" : "event",
+      "defining_code" : {
+        "_type" : "CODE_PHRASE",
+        "terminology_id" : {
+          "_type" : "TERMINOLOGY_ID",
+          "value" : "openehr"
+        },
+        "code_string" : "433"
+      }
+    },
+    "composer" : {
+      "_type" : "PARTY_IDENTIFIED",
+      "name" : "composer name"
+    },
+    "context" : {
+      "_type" : "EVENT_CONTEXT",
+      "start_time" : {
+        "_type" : "DV_DATE_TIME",
+        "value" : "2024-10-04T14:13:03.017287445Z"
+      },
+      "setting" : {
+        "_type" : "DV_CODED_TEXT",
+        "value" : "secondary medical care",
+        "defining_code" : {
+          "_type" : "CODE_PHRASE",
+          "terminology_id" : {
+            "_type" : "TERMINOLOGY_ID",
+            "value" : "openehr"
+          },
+          "code_string" : "232"
+        }
+      }
+    },
+    "content" : [ {
+      "_type" : "INSTRUCTION",
+      "name" : {
+        "_type" : "DV_TEXT",
+        "value" : "Medication order"
+      },
+      "archetype_details" : {
+        "archetype_id" : {
+          "value" : "openEHR-EHR-INSTRUCTION.medication_order.v3"
+        },
+        "rm_version" : "1.0.4"
+      },
+      "language" : {
+        "_type" : "CODE_PHRASE",
+        "terminology_id" : {
+          "_type" : "TERMINOLOGY_ID",
+          "value" : "ISO_639-1"
+        },
+        "code_string" : "en"
+      },
+      "encoding" : {
+        "_type" : "CODE_PHRASE",
+        "terminology_id" : {
+          "_type" : "TERMINOLOGY_ID",
+          "value" : "IANA_character-sets"
+        },
+        "code_string" : "UTF-8"
+      },
+      "subject" : {
+        "_type" : "PARTY_SELF"
+      },
+      "protocol" : {
+        "_type" : "ITEM_TREE",
+        "name" : {
+          "_type" : "DV_TEXT",
+          "value" : "Tree"
+        },
+        "items" : [ {
+          "_type" : "ELEMENT",
+          "name" : {
+            "_type" : "DV_TEXT",
+            "value" : "Order identifier"
+          },
+          "value" : {
+            "_type" : "DV_IDENTIFIER",
+            "id" : "32948577530302"
+          },
+          "archetype_node_id" : "at0004"
+        } ],
+        "archetype_node_id" : "at0005"
+      },
+      "narrative" : {
+        "_type" : "DV_TEXT",
+        "value" : "Antiretroviral Therapy (ART) once daily"
+      },
+      "activities" : [ {
+        "_type" : "ACTIVITY",
+        "name" : {
+          "_type" : "DV_TEXT",
+          "value" : "Medication order"
+        },
+        "description" : {
+          "_type" : "ITEM_TREE",
+          "name" : {
+            "_type" : "DV_TEXT",
+            "value" : "Tree"
+          },
+          "items" : [ {
+            "_type" : "ELEMENT",
+            "name" : {
+              "_type" : "DV_TEXT",
+              "value" : "Medication item"
+            },
+            "value" : {
+              "_type" : "DV_TEXT",
+              "value" : "Antiretroviral Therapy (ART)",
+              "formatting" : "plain"
+            },
+            "archetype_node_id" : "at0070"
+          }, {
+            "_type" : "CLUSTER",
+            "name" : {
+              "_type" : "DV_TEXT",
+              "value" : "Medication order"
+            },
+            "archetype_details" : {
+              "archetype_id" : {
+                "value" : "openEHR-EHR-CLUSTER.therapeutic_direction.v1"
+              },
+              "rm_version" : "1.0.4"
+            },
+            "items" : [ {
+              "_type" : "CLUSTER",
+              "name" : {
+                "_type" : "DV_TEXT",
+                "value" : "Medication order"
+              },
+              "archetype_details" : {
+                "archetype_id" : {
+                  "value" : "openEHR-EHR-CLUSTER.dosage.v2"
+                },
+                "rm_version" : "1.0.4"
+              },
+              "items" : [ {
+                "_type" : "CLUSTER",
+                "name" : {
+                  "_type" : "DV_TEXT",
+                  "value" : "Medication order"
+                },
+                "archetype_details" : {
+                  "archetype_id" : {
+                    "value" : "openEHR-EHR-CLUSTER.timing_daily.v1"
+                  },
+                  "rm_version" : "1.0.4"
+                },
+                "items" : [ {
+                  "_type" : "ELEMENT",
+                  "name" : {
+                    "_type" : "DV_TEXT",
+                    "value" : "Frequency"
+                  },
+                  "value" : {
+                    "_type" : "DV_QUANTITY",
+                    "precision" : 0,
+                    "units" : "1/d",
+                    "magnitude" : 1.0
+                  },
+                  "archetype_node_id" : "at0003"
+                } ],
+                "archetype_node_id" : "openEHR-EHR-CLUSTER.timing_daily.v1"
+              } ],
+              "archetype_node_id" : "openEHR-EHR-CLUSTER.dosage.v2"
+            } ],
+            "archetype_node_id" : "openEHR-EHR-CLUSTER.therapeutic_direction.v1"
+          }, {
+            "_type" : "CLUSTER",
+            "name" : {
+              "_type" : "DV_TEXT",
+              "value" : "Order details"
+            },
+            "items" : [ {
+              "_type" : "CLUSTER",
+              "name" : {
+                "_type" : "DV_TEXT",
+                "value" : "Medication order"
+              },
+              "archetype_details" : {
+                "archetype_id" : {
+                  "value" : "openEHR-EHR-CLUSTER.medication_order_summary.v0"
+                },
+                "rm_version" : "1.0.4"
+              },
+              "items" : [ {
+                "_type" : "ELEMENT",
+                "name" : {
+                  "_type" : "DV_TEXT",
+                  "value" : "Order status"
+                },
+                "value" : {
+                  "_type" : "DV_CODED_TEXT",
+                  "value" : "Active",
+                  "defining_code" : {
+                    "_type" : "CODE_PHRASE",
+                    "terminology_id" : {
+                      "_type" : "TERMINOLOGY_ID",
+                      "value" : "local"
+                    },
+                    "code_string" : "at0021"
+                  }
+                },
+                "archetype_node_id" : "at0001"
+              } ],
+              "archetype_node_id" : "openEHR-EHR-CLUSTER.medication_order_summary.v0"
+            } ],
+            "archetype_node_id" : "at0113"
+          } ],
+          "archetype_node_id" : "at0002"
+        },
+        "action_archetype_id" : "/.*/",
+        "archetype_node_id" : "at0001",
+        "uid" : {
+          "_type" : "HIER_OBJECT_ID",
+          "value" : "82fa802e-8a1f-4a53-9f3d-7c6e49995f4e"
+        }
+      } ],
+      "archetype_node_id" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
+      "uid" : {
+        "_type" : "HIER_OBJECT_ID",
+        "value" : "64748252-9d13-4d7b-b74e-b4008ebc6c71"
+      }
+    } ],
+    "archetype_node_id" : "openEHR-EHR-COMPOSITION.medication_list.v1"
+  }

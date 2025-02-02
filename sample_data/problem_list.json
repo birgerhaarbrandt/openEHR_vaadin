@@ -1,0 +1,563 @@
+{
+  "_type": "COMPOSITION",
+  "name": {
+    "_type": "DV_TEXT",
+    "value": "International Patient Summary"
+  },
+  "uid": {
+    "_type": "OBJECT_VERSION_ID",
+    "value": "45d8a9f6-86d2-45bf-a5db-d565e96f8061::default::1"
+  },
+  "archetype_details": {
+    "_type": "ARCHETYPED",
+    "archetype_id": {
+      "_type": "ARCHETYPE_ID",
+      "value": "openEHR-EHR-COMPOSITION.health_summary.v1"
+    },
+    "template_id": {
+      "_type": "TEMPLATE_ID",
+      "value": "International Patient Summary"
+    },
+    "rm_version": "1.1.0"
+  },
+  "archetype_node_id": "openEHR-EHR-COMPOSITION.health_summary.v1",
+  "language": {
+    "_type": "CODE_PHRASE",
+    "terminology_id": {
+      "_type": "TERMINOLOGY_ID",
+      "value": "ISO_639-1"
+    },
+    "code_string": "en"
+  },
+  "territory": {
+    "_type": "CODE_PHRASE",
+    "terminology_id": {
+      "_type": "TERMINOLOGY_ID",
+      "value": "ISO_3166-1"
+    },
+    "code_string": "SI"
+  },
+  "category": {
+    "_type": "DV_CODED_TEXT",
+    "value": "event",
+    "defining_code": {
+      "_type": "CODE_PHRASE",
+      "terminology_id": {
+        "_type": "TERMINOLOGY_ID",
+        "value": "openehr"
+      },
+      "code_string": "433"
+    }
+  },
+  "composer": {
+    "_type": "PARTY_IDENTIFIED",
+    "name": "Administrator"
+  },
+  "context": {
+    "_type": "EVENT_CONTEXT",
+    "start_time": {
+      "_type": "DV_DATE_TIME",
+      "value": "2024-10-06T10:14:39.748525064Z"
+    },
+    "setting": {
+      "_type": "DV_CODED_TEXT",
+      "value": "other care",
+      "defining_code": {
+        "_type": "CODE_PHRASE",
+        "terminology_id": {
+          "_type": "TERMINOLOGY_ID",
+          "value": "openehr"
+        },
+        "code_string": "238"
+      }
+    }
+  },
+  "content": [
+    {
+      "_type": "SECTION",
+      "name": {
+        "_type": "DV_TEXT",
+        "value": "Problem List"
+      },
+      "archetype_details": {
+        "_type": "ARCHETYPED",
+        "archetype_id": {
+          "_type": "ARCHETYPE_ID",
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.1.0"
+      },
+      "archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "items": [
+        {
+          "_type": "EVALUATION",
+          "name": {
+            "_type": "DV_TEXT",
+            "value": "Problem/Diagnosis"
+          },
+          "archetype_details": {
+            "_type": "ARCHETYPED",
+            "archetype_id": {
+              "_type": "ARCHETYPE_ID",
+              "value": "openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+            },
+            "rm_version": "1.1.0"
+          },
+          "archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+          "language": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_type": "ITEM_TREE",
+            "name": {
+              "_type": "DV_TEXT",
+              "value": "structure"
+            },
+            "archetype_node_id": "at0001",
+            "items": [
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis name"
+                },
+                "archetype_node_id": "at0002",
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Tuberculosis (TB)"
+                }
+              },
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Date/time of onset"
+                },
+                "archetype_node_id": "at0077",
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2022-01-15T17:00:00+01:00"
+                }
+              },
+              {
+                "_type": "CLUSTER",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis qualifier"
+                },
+                "archetype_details": {
+                  "_type": "ARCHETYPED",
+                  "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-CLUSTER.problem_qualifier.v1"
+                  },
+                  "rm_version": "1.1.0"
+                },
+                "archetype_node_id": "openEHR-EHR-CLUSTER.problem_qualifier.v1",
+                "items": [
+                  {
+                    "_type": "ELEMENT",
+                    "name": {
+                      "_type": "DV_TEXT",
+                      "value": "Active/Inactive?"
+                    },
+                    "archetype_node_id": "at0003",
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Active",
+                      "defining_code": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                          "_type": "TERMINOLOGY_ID",
+                          "value": "local"
+                        },
+                        "code_string": "at0026"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Diagnostic certainty"
+                },
+                "archetype_node_id": "at0073",
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Confirmed",
+                  "defining_code": {
+                    "_type": "CODE_PHRASE",
+                    "terminology_id": {
+                      "_type": "TERMINOLOGY_ID",
+                      "value": "local"
+                    },
+                    "code_string": "at0076"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_type": "EVALUATION",
+          "name": {
+            "_type": "DV_TEXT",
+            "value": "Problem/Diagnosis #2"
+          },
+          "archetype_details": {
+            "_type": "ARCHETYPED",
+            "archetype_id": {
+              "_type": "ARCHETYPE_ID",
+              "value": "openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+            },
+            "rm_version": "1.1.0"
+          },
+          "archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+          "language": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_type": "ITEM_TREE",
+            "name": {
+              "_type": "DV_TEXT",
+              "value": "structure"
+            },
+            "archetype_node_id": "at0001",
+            "items": [
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis name"
+                },
+                "archetype_node_id": "at0002",
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "HIV"
+                }
+              },
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Date/time of onset"
+                },
+                "archetype_node_id": "at0077",
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2010-05-20T13:00:00+02:00"
+                }
+              },
+              {
+                "_type": "CLUSTER",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis qualifier"
+                },
+                "archetype_details": {
+                  "_type": "ARCHETYPED",
+                  "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-CLUSTER.problem_qualifier.v1"
+                  },
+                  "rm_version": "1.1.0"
+                },
+                "archetype_node_id": "openEHR-EHR-CLUSTER.problem_qualifier.v1",
+                "items": [
+                  {
+                    "_type": "ELEMENT",
+                    "name": {
+                      "_type": "DV_TEXT",
+                      "value": "Active/Inactive?"
+                    },
+                    "archetype_node_id": "at0003",
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Active",
+                      "defining_code": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                          "_type": "TERMINOLOGY_ID",
+                          "value": "local"
+                        },
+                        "code_string": "at0026"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Diagnostic certainty"
+                },
+                "archetype_node_id": "at0073",
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Confirmed",
+                  "defining_code": {
+                    "_type": "CODE_PHRASE",
+                    "terminology_id": {
+                      "_type": "TERMINOLOGY_ID",
+                      "value": "local"
+                    },
+                    "code_string": "at0076"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_type": "EVALUATION",
+          "name": {
+            "_type": "DV_TEXT",
+            "value": "Problem/Diagnosis #3"
+          },
+          "archetype_details": {
+            "_type": "ARCHETYPED",
+            "archetype_id": {
+              "_type": "ARCHETYPE_ID",
+              "value": "openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+            },
+            "rm_version": "1.1.0"
+          },
+          "archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+          "language": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_type": "ITEM_TREE",
+            "name": {
+              "_type": "DV_TEXT",
+              "value": "structure"
+            },
+            "archetype_node_id": "at0001",
+            "items": [
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis name"
+                },
+                "archetype_node_id": "at0002",
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Anaemia (Secondary to TB)"
+                }
+              },
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Date/time of onset"
+                },
+                "archetype_node_id": "at0077",
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2023-06-01T12:00:00+02:00"
+                }
+              },
+              {
+                "_type": "CLUSTER",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis qualifier"
+                },
+                "archetype_details": {
+                  "_type": "ARCHETYPED",
+                  "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-CLUSTER.problem_qualifier.v1"
+                  },
+                  "rm_version": "1.1.0"
+                },
+                "archetype_node_id": "openEHR-EHR-CLUSTER.problem_qualifier.v1",
+                "items": [
+                  {
+                    "_type": "ELEMENT",
+                    "name": {
+                      "_type": "DV_TEXT",
+                      "value": "Active/Inactive?"
+                    },
+                    "archetype_node_id": "at0003",
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Active",
+                      "defining_code": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                          "_type": "TERMINOLOGY_ID",
+                          "value": "local"
+                        },
+                        "code_string": "at0026"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "_type": "EVALUATION",
+          "name": {
+            "_type": "DV_TEXT",
+            "value": "Problem/Diagnosis #4"
+          },
+          "archetype_details": {
+            "_type": "ARCHETYPED",
+            "archetype_id": {
+              "_type": "ARCHETYPE_ID",
+              "value": "openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+            },
+            "rm_version": "1.1.0"
+          },
+          "archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+          "language": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+              "_type": "TERMINOLOGY_ID",
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_type": "ITEM_TREE",
+            "name": {
+              "_type": "DV_TEXT",
+              "value": "structure"
+            },
+            "archetype_node_id": "at0001",
+            "items": [
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis name"
+                },
+                "archetype_node_id": "at0002",
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Malnutrition"
+                }
+              },
+              {
+                "_type": "ELEMENT",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Date/time of onset"
+                },
+                "archetype_node_id": "at0077",
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2023-07-15T09:00:00+02:00"
+                }
+              },
+              {
+                "_type": "CLUSTER",
+                "name": {
+                  "_type": "DV_TEXT",
+                  "value": "Problem/Diagnosis qualifier"
+                },
+                "archetype_details": {
+                  "_type": "ARCHETYPED",
+                  "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-CLUSTER.problem_qualifier.v1"
+                  },
+                  "rm_version": "1.1.0"
+                },
+                "archetype_node_id": "openEHR-EHR-CLUSTER.problem_qualifier.v1",
+                "items": [
+                  {
+                    "_type": "ELEMENT",
+                    "name": {
+                      "_type": "DV_TEXT",
+                      "value": "Active/Inactive?"
+                    },
+                    "archetype_node_id": "at0003",
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Active",
+                      "defining_code": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                          "_type": "TERMINOLOGY_ID",
+                          "value": "local"
+                        },
+                        "code_string": "at0026"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
